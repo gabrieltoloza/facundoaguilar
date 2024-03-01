@@ -77,7 +77,7 @@ starting.addEventListener("click", (event) =>{
 
 })
 
-
+// Deslizamiento hacia el inicio al darle click al Logotipo
 logoHeader.addEventListener("click", (event) => {
     console.log("el boton de logo funciona");
     event.preventDefault();
@@ -90,7 +90,7 @@ logoHeader.addEventListener("click", (event) => {
 
 
 
-//* controlando la aparicion de los primeros titulos ( V-2)
+//* controlando la aparicion de los primeros titulos ( V-1)
 // window.onload = () => {
 //     const elements = document.querySelectorAll(".fade-in-element");
 //     elements.forEach((element, index) => {
@@ -101,7 +101,7 @@ logoHeader.addEventListener("click", (event) => {
 
 
 
-
+//* controlando la aparicion de los primeros titulos ( V-2)
 window.onload = () => {
     const elements = document.querySelectorAll(".fade-in-element");
     for (let i = 0; i < elements.length ; i++){
