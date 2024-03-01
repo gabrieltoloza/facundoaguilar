@@ -1,0 +1,8 @@
+.pytest_cache
+.vscode
+envLandingPage
+staticfiles
+.env
+db.sqlite3
+__pycache__
+migrations

@@ -1,0 +1,420 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% comment %} Google Fonts {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+    {% comment %} font-awesome link {% endcomment %}
+    <script src="https://kit.fontawesome.com/ccbd4d6bc1.js" crossorigin="anonymous"></script>
+    
+    {% comment %} bootstrap {% endcomment %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    {% comment %} Css {% endcomment %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    {% comment %} Javascript {% endcomment %}
+    <script defer src="{% static 'js/main.js' %}"></script>
+
+
+    <title>Facundo N. Aguilar - Asesor inmobiliario</title>
+
+
+    {% comment %} Variables de imagenes {% endcomment %}
+    <style>
+
+      :root {
+        --PrimerFondo: url({% static "image/FondoPrimario.jpg" %});
+        --SegundoFondo: url({% static "image/FondoSecundario.jpg" %});
+        --Card-family-happy: url({% static "image/card-familyhappy.jpg" %});
+        --Card-hand: url({% static "image/card-hand.jpg" %});
+        --Card-KeyHand: url({% static "image/card-keyhand.jpg" %});
+        --Last-image: url({% static "image/departamento.jpg" %});
+      }
+      
+      input[type=number]::-webkit-inner-spin-button, 
+      input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+      input[type=number] {
+          -moz-appearance: textfield;
+      }
+        
+    </style>
+</head>
+<body>
+    <header class="d-flex justify-content-center align-items-center text-light">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+        <div class="container-fluid">
+          <a id="logo-header" href="#" class="navbar-brand d-lg-none">
+            <img src="{% static "image/logo.png" %}" alt="logo" style="height:50px; border-radius:10px; width:55px;">
+            Facundo N. Aguilar
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aira-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-lg-flex justify-content-between align-items-center" id="navbarNav">
+            <a id="logo-header" href="#" class="navbar-brand d-none d-lg-block ">
+              <img src="{% static "image/logo.png" %}" alt="logo" style="height:50px; margin-left:20px; width:55px; border-radius:10px;">
+              Facundo N. Aguilar
+            </a>
+            
+            <div>
+              <a class="btn btn-light mt-2" id="navBtn">
+                Contacto
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+
+      <div class="container position-relative w-75">
+        <div class="row align-items-center  d-flex flex-column">
+          <div class="col-12 col-lg-6 px-4 mb-4">
+            <h1 id="titulo1" class="fade-in-element display-4 text-center mb-6s fw-normal">
+              Explora propiedades exclusivas
+            </h1>
+          </div>
+          <div class="col-12 col-lg-6 px-4 mb-4">
+            
+            <h5 id="subtitulo1" class="fade-in-element text-center">
+              Inmobiliario - Consultor - Asesor
+            </h3>
+            <p id="parrafoPrincipal" class="fade-in-element text-center mt-4 mb-2"> 
+              <i> Con un profundo conocimiento del mercado local 
+              y una amplia red de contactos, estoy aquí para 
+              hacer que tu experiencia de búsqueda de hogar 
+              sea fluida y satisfactoria.</i> 
+              
+            </p>
+          </div>
+          {% comment %} <div class="col-12 col-lg-6 px-4 ">
+            <h1 class="display-4 text-center mb-4">
+              Coldwell Banker Destino
+            </h1>
+            <p>
+              <small>Para Coldwell Banker, su gente es tan importante 
+              como su negocio. Con el trabajo en equipo y la 
+              participación de sus agencias, pueden lograr sus 
+              objetivos y Desygner siempre ha sido un gran apoyo. 
+              Cualquier problema o dificultad se trata con cuidado 
+              y eficiencia sin interrumpir su forma de trabajar.</small>
+              
+            </p>
+          </div> {% endcomment %}
+          <div class="col-12 col-lg-6 px-4 text-center ">
+            <a id="starting" class="btn bg-button  btn-lg mt-3">
+              Comienza
+            </a>
+          </div> 
+        </div>
+        {% comment %} <div class="d-flex flex-column align-items-center">
+          <a href="#start"class="btn btn-primary btn-lg mt-3 ">
+            Comienza
+          </a>
+        </div>  {% endcomment %}
+      </div>
+    </header>
+
+
+    <section id="start" class="py-5 my-5">
+      <div class="container">
+        <h1 class="text-center pb-5 display-6 mb-5 px-4 fw-bold ">
+          <i>Comprar una casa no tiene por qué ser un misterio</i>
+        </h1>
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6 px-4 text-secondary">
+            <p class="fw-bold text-dark">
+              Como agente inmobiliario en Coldwell Banker,
+              me comprometo a brindar un servicio
+              excepcional, conectando a las personas con 
+              sus hogares ideales. En nuestra empresa,
+              nos esforzamos por ofrecer soluciones
+              personalizadas y profesionales en cada
+              transacción.
+                
+            </p>
+            <br />
+            <p>
+              Con nuestro equipo altamente capacitado y la
+              amplia red de recursos de la empresa, tengo
+              el privilegio de guiar a nuestros clientes hacia
+              soluciones inmobiliarias que no solo cumplen,
+              sino que superan sus expectativas. 
+            </p>
+            <br />
+            <p>
+              En mi papel como agente de Coldwell Banker,
+              mi compromiso es ofrecerte un servicio excepcional
+              y personalizado. Estoy aquí para conectar 
+              personas con sus hogares ideales, superando 
+              expectativas en cada transacción.
+
+            </p>
+          </div>
+          <div class="col-12 col-lg-6 px-4">
+            <img class="w-100 h-100 rounded" src="{% static "image/FondoSecundario.jpg" %}" alt="Inmobiliario en accion">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <div class="card-group my-5 py5">
+        <div class="card mx-2">
+          <img class="card-img-top" src="{% static "image/card-hand.jpg" %}" alt="Apriete de manos. Trato hecho">
+          <div class="card-body">
+            <h5 class="card-title">
+              Aprenda con personas reales
+            </h5>
+            <p class="card-text">
+              Con un historial probado de resultados
+               y una dedicación inquebrantable a satisfacer 
+               las necesidades de nuestros clientes, estamos 
+               aquí para brindarte una experiencia sin igual.
+            </p>
+          </div>
+        </div>
+        <div class="card mx-2">
+          <img class="card-img-top" src="{% static "image/card-keyhand.jpg" %}" alt="Entrega de llaves de la propiedad">
+          <div class="card-body">
+            <h5 class="card-title">
+              Compra con confianza
+            </h5>
+            <p class="card-text">
+              Cuando eliges hacer negocios con nosotros.
+              eliges confianza y compromiso. Con nuestro 
+              broker y martillero de excelencia,
+              el enfoque de nuestra empresa se basa en
+              la transparencia, la integridad y el servicio
+              excepcional.
+            </p>
+          </div>
+        </div>
+        <div class="card mx-2">
+          <img class="card-img-top" src="{% static "image/card-familyhappy.jpg" %}" alt="Familia feliz disfrutando la propiedad">
+          <div class="card-body">
+            <h5 class="card-title">
+              Comparte tu historia
+            </h5>
+            <p class="card-text">
+              En Coldwell Banker Destino, nos esforzamos
+               constantemente por mejorar y brindar el
+                mejor servicio posible a nuestros clientes
+                . Tu opinión es fundamental para nosotros.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+
+
+    <section id="contact-me" class="newsletter py-5 my-5">
+      <div class="container w-75 position-relative" style="max-width: 600px;">
+        {% comment %} Mensajes Django {% endcomment %}
+
+        {% if messages %}
+        <div class="messages text-center mt-5">
+            {% for message in messages %}
+                <div class="d-inline-block alert {% if message.tags %}alert- {{ message.tags }} {% endif %} bg-primary rounded" style="min-width: 200px !important; width: auto !important; border-radius: 10px !important; background-color: lightblue !important;">
+                  {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        
+        <h1 class="text-center py-5 display-8 mb-5 px-4 text-light">
+          Contáctanos!
+        </h1>
+        <h3 class="text-center py-2 display-8  px-4 text-light">
+          Completa el fomulario y recibe atención personalizada
+        </h3>
+        <form method='POST' class="d-block mb-5">
+          {% csrf_token %}
+          <label for="form-input-name" class="form-label text-light me-2">Nombre</label>
+          <input name="nombre" id="form-input-name" class="form-control me-2" type="search" placeholder="Ingrese su nombre..." required>
+          <label for="form-input-phone" class="form-label text-light me-2">Telefono</label>
+          <input name="telefono" id="form-input-phone" type="number" class="form-control me-2" placeholder="Ingrese código de area..." required>
+          <label for="form-input-mail" class="form-label text-light me-2">Email - Opcional</label>
+          <input name="email" id="form-input-mail" class="form-control me-2" type="email" placeholder="ejemplo@gmail.com" autocomplete="email">
+          <button class="btn bg-button mt-4" type="submit">
+            <strong>Enviar</strong>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    
+
+    <section class="my-5 py-5 py-sm-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 p-2 p-md-4">
+            <div class="row">
+              <div class="col-12 col-md-2 text-primary">
+                <i class="fas fa-users fa-2x custom-icon bg-icon"></i>
+              </div>
+              <div class="col-12 col-md-10">
+                <h3 class="h5 h3-md">Transparencia total</h3>
+                <p class="small md-sm">
+                  En nuestra firma inmobiliaria, la 
+                  transparencia es nuestro sello distintivo. 
+                  Nos comprometemos a ofrecerle una 
+                  experiencia de venta de propiedades 
+                  clara y honesta en todo momento
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 p-2 p-md-4">
+            <div class="row">
+              <div class="col-12 col-md-2 text-primary">
+                <i class="fas fa-wallet fa-2x custom-icon bg-icon"></i>
+              </div>
+              <div class="col-12 col-md-10">
+                <h3 class="h5 h3-md">Seguridad en cada compra</h3>
+                <p class="small md-sm">
+                  Confíe en nuestra experiencia y profesionalismo
+                   en el mercado inmobiliario. Nuestra oficina 
+                   respaldada por una martillera de confianza le 
+                   ofrece seguridad en cada transacción de propiedades.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 p-2 p-md-4">
+            <div class="row">
+              <div class="col-12 col-md-2 text-primary">
+                <i class="fas fa-home fa-2x custom-icon bg-icon"></i>
+              </div>
+              <div class="col-12 col-md-10">
+                <h3 class="h5 h3-md">Amplia seleccion de propiedades</h3>
+                <p class="small md-sm">
+                  En Coldwell Banker Destino, te ofrecemos 
+                  una amplia selección de propiedades que 
+                  abarcan diferentes estilos, ubicaciones y 
+                  presupuestos. Explora nuestro catálogo 
+                  hoy mismo y encuentra la mejor opción para ti.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 p-2 p-md-4">
+            <div class="row">
+              <div class="col-12 col-md-2 text-primary">
+                <i class="fas fa-book fa-2x custom-icon bg-icon"></i>
+              </div>
+              <div class="col-12 col-md-10">
+                <h3 class="h5 h3-md">Perspectivas reales</h3>
+                <p class="small md-sm">
+                  Su satisfacción nos impulsa. Después 
+                  de adquirir su propiedad con nosotros, 
+                  compartiendo su experiencia post venta, 
+                  nos ayuda a brindar un servicio aún mejor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="bg-dark text-light py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 col-lg-4 p-3">
+            <h3>Términos legales</h3>
+            <p class="mt-3"><small><i>
+              En Coldwell Banker Destino, 
+              garantizamos el cumplimiento 
+              legal y respetamos los derechos 
+              de propiedad. Todos los derechos 
+              están reservados para proteger 
+              la integridad de nuestros clientes
+               y sus inversiones.
+              </i></small></p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-2 p-3">
+            <h3>Links</h3>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="https://w.app/YLp0KR" class="nav-link active" aria-current="page">
+                  <i class="fab fa-whatsapp"></i>
+                  Whatsapp
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://www.instagram.com/facundo.n.aguilar/?next=%2F" class="nav-link">
+                  <i class="fab fa-instagram"></i>
+                  Instagram
+                </a>
+              </li>
+              
+              
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-2 p-3">
+            <h3>Tags</h3>
+            <div>
+              <span class="badge rounded-pill bg-button">
+                Business
+              </span>
+              <span class="badge rounded-pill bg-button">
+                Estate
+              </span>
+              <span class="badge rounded-pill bg-button">
+                Security
+              </span>
+              <span class="badge rounded-pill bg-button">
+                RE
+              </span>
+              <span class="badge rounded-pill bg-button">
+                Solutions
+              </span>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 p-3">
+            <h3>Contáctanos</h3>
+            <form method="POST" class="d-block mb-5">
+              {% csrf_token %}
+              <label for="footer-input-name" class="form-label text-light me-2">Nombre</label>
+              <input name="nombre" id="footer-input-name" class="form-control me-2" type="text" placeholder="Ingrese su nombre..." required>
+              <label for="footer-input-phone" class="form-label text-light me-2">Telefono</label>
+              <input name="telefono" id="footer-input-phone" type="number" class="form-control me-2" placeholder="Ingrese código de area..." required>
+              <label for="footer-input-mail" class="form-label text-light me-2">Email - Opcional</label>
+              <input name="email" id="footer-input-mail" class="form-control me-2" type="email" placeholder="ejemplo@gmail.com" autocomplete="email">
+              <button class="btn bg-button mt-2 " type="submit">
+                Enviar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+     
+    
+
+
+    {% comment %} bootstrap {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+</body>
+</html>
