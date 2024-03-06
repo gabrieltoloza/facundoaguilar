@@ -25,6 +25,8 @@ window.addEventListener("scroll", () => {
         navbar.classList.add("navbar-light");
         // agregue un sombreado
         navbar.style.boxShadow = "0px 5px 15px rgba(0, 0, 0, 0.3)";
+        navBtn.classList.remove("btn-light");
+        navBtn.classList.add("bg-button");
         // evita que el evento se dispare más de una vez
         bol = true;
         // eliminar todas las clases cuando la página se desplaza hacia arriba
@@ -36,6 +38,8 @@ window.addEventListener("scroll", () => {
         navbar.classList.add("navbar-dark");
         // remover el sombreado
         navbar.style.boxShadow = 'none';
+        navBtn.classList.remove("bg-button");
+        navBtn.classList.add("btn-light")
         // evita que el evento se dispare más de una vez
         bol = false;
     }
@@ -61,7 +65,15 @@ window.addEventListener("scroll", () => {
 navBtn.addEventListener("click", function (event){
     console.log("el boton funciona")
     event.preventDefault();
-    contactMe.scrollIntoView({behavior: "smooth"});
+
+    // Obtenemos la posicion del Formulario de Contacto
+    const obtenerPosicionForm = contactMe.getBoundingClientRect().top + window.scrollY
+    const deslizarBtnContacto = obtenerPosicionForm - 100
+
+    window.scrollTo({
+        top: deslizarBtnContacto,
+        behavior: "smooth"
+    })
 
     const bsCollapse = new bootstrap.Collapse(navBarCollapse, {toggle: false})
     bsCollapse.hide()
@@ -73,9 +85,19 @@ navBtn.addEventListener("click", function (event){
 starting.addEventListener("click", (event) =>{
     console.log("el comienzo funciona");
     event.preventDefault();
-    startpage.scrollIntoView({behavior: "smooth"});
 
-})
+    // Obtén la posición de desplazamiento de startpage
+    const startpageOffset = startpage.getBoundingClientRect().top + window.scrollY;
+    // Resta 150px a la posición de desplazamiento
+    const scrollToPosition = startpageOffset - 100;
+    // Desplaza la ventana a la posición calculada
+    window.scrollTo({
+        top: scrollToPosition,
+        behavior: "smooth"
+    });
+});
+
+
 
 // Deslizamiento hacia el inicio al darle click al Logotipo
 logoHeader.addEventListener("click", (event) => {
