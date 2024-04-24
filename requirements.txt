@@ -6,5 +6,5 @@ packaging==23.2
 pluggy==1.4.0
 pytest==8.0.2
 pytest-django==4.8.0
-sqlparse==0.4.4
+sqlparse==0.5.0
 tzdata==2024.1
